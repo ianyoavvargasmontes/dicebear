@@ -1,33 +1,85 @@
+/* =======================================================
+   ESTILO FUTURISTA TRON – ADAPTADO A FORMULARIO
+   ======================================================= */
+
+/* ---- Variables de color ---- */
+:root {
+    --neon: #00e5ff;
+    --neon-soft: rgba(0, 229, 255, 0.35);
+    --dark-bg: #0b0f19;
+}
+
+/* ---- Fondo general ---- */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Orbitron', 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #111726, #05070d);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #e5eaff;
 }
 
+/* ---- Contenedor principal ---- */
 .container {
-    background: #fff;
+    background: rgba(12, 18, 30, 0.7);
+    backdrop-filter: blur(12px);
     padding: 30px;
-    border-radius: 12px;
-    width: 300px;
+    border-radius: 16px;
+    width: 320px;
     text-align: center;
+    border: 1px solid var(--neon);
+    box-shadow: 
+        0 0 20px var(--neon-soft),
+        inset 0 0 15px var(--neon-soft);
 }
 
-input, select, button {
+/* ---- Inputs y selects ---- */
+input, select {
     width: 100%;
-    padding: 8px;
-    margin-top: 10px;
+    padding: 10px;
+    margin-top: 12px;
+    background: transparent;
+    border: 1px solid var(--neon-soft);
+    border-radius: 8px;
+    color: var(--neon);
+    outline: none;
+    box-shadow: inset 0 0 8px var(--neon-soft);
 }
 
+input::placeholder {
+    color: rgba(229, 234, 255, 0.6);
+}
+
+/* ---- Focus neón ---- */
+input:focus, select:focus {
+    border-color: var(--neon);
+    box-shadow: 0 0 12px var(--neon);
+}
+
+/* ---- Botón ---- */
 button {
-    background: #667eea;
-    color: white;
-    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-top: 18px;
+    background: transparent;
+    color: var(--neon);
+    border: 1px solid var(--neon);
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px var(--neon-soft);
+    transition: all 0.3s ease;
 }
 
+button:hover {
+    background: var(--neon);
+    color: #000;
+    box-shadow: 0 0 25px var(--neon);
+}
+
+/* ---- Avatar ---- */
 .avatar-container {
     margin-top: 20px;
 }
@@ -35,4 +87,14 @@ button {
 img {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--neon);
+    box-shadow: 0 0 20px var(--neon-soft);
+}
+
+/* ---- Títulos opcionales ---- */
+h1, h2, h3 {
+    color: var(--neon);
+    text-shadow: 0 0 10px var(--neon);
+    letter-spacing: 2px;
 }
