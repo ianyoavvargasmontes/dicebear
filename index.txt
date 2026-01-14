@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Avatares - DiceBear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Generador de Avatares 🎭</h1>
+
+        <input type="text" id="seed" placeholder="Ingresa un nombre">
+        
+        <select id="style">
+            <option value="adventurer">Adventurer</option>
+            <option value="avataaars">Avataaars</option>
+            <option value="bottts">Bottts</option>
+            <option value="pixel-art">Pixel Art</option>
+        </select>
+
+        <button onclick="generarAvatar()">Generar Avatar</button>
+
+        <div class="avatar-container">
+            <img id="avatar" src="" alt="Avatar generado">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
